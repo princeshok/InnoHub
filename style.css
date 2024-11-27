@@ -1,142 +1,293 @@
-/* Basic reset */
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Ensure the header sticks to the top of the page */
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: white; /* Light text color for the body */
+}
+
+body.dark-mode nav {
+    background-color: #222; /* Dark background for navbar */
+}
+
+body.dark-mode .left-nav a,
+body.dark-mode .right-nav a {
+    color: white; /* White color for nav links */
+    transition: color 0.3s ease;
+}
+
+body.dark-mode .left-nav a:hover,
+body.dark-mode .right-nav a:hover {
+    color: #ffcc00; /* Golden color for hover effect */
+}
+
+body.dark-mode .search-box input {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .search-box button {
+    background-color: #333;
+    color: white;
+}
+
+#lightMode {
+    color: #fff;
+    background-color: #333;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#lightMode:hover {
+    background-color: #555;
+}
+
+
+
+/* Header styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333; /* Dark background color for the header */
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+    z-index: 10;
 }
 
-/* Logo */
+/* Logo styles */
 .logo img {
-    height: 50px; /* Adjust based on your logo size */
+    width: 150px;
 }
 
-/* Navigation Styles */
+/* Navigation styles */
 nav {
     display: flex;
     align-items: center;
-    width: 100%;
     justify-content: space-between;
+    width: 100%;
 }
 
-.left-nav {
+ul {
     list-style: none;
+}
+
+.left-nav, .right-nav {
     display: flex;
+    gap: 20px;
 }
 
-.left-nav li {
-    margin-right: 20px;
+.left-nav li, .right-nav li {
+    padding: 10px;
 }
 
-.left-nav li a {
+.left-nav a, .right-nav a {
     text-decoration: none;
-    color: white;
-    font-size: 16px;
+    color: #333;
 }
 
-/* Right Navigation (light mode button, login, get a quote) */
-.right-nav {
-    list-style: none;
-    display: flex;
+/* Hamburger Menu for Mobile */
+.hamburger-container {
+    display: none;
 }
 
-.right-nav li {
-    margin-left: 20px;
-}
-
-.right-nav li a,
-.right-nav li button {
-    color: white;
-    font-size: 16px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* Search Box Styling */
-.search-box {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-}
-
-.search-box input {
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.search-box button {
-    padding: 5px 10px;
-    background-color: #ff6347; /* A light red color for the button */
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.search-box button:hover {
-    background-color: #ff4500;
-}
-
-/* Hamburger menu for mobile responsiveness */
 .hamburger-menu {
-    display: none; /* Hidden by default, make it visible on smaller screens */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
 .hamburger-menu div {
-    width: 25px;
-    height: 3px;
+    width: 30px;
+    height: 4px;
+    background-color: black;
+}
+
+/* Menu Links (Desktop) */
+#leftNavLinks {
+    display: flex;
+    gap: 20px;
+}
+
+#leftNavLinks.active {
+    display: flex;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.search-box input {
+    width: 200px;
+    padding: 5px;
+}
+
+.search-box button {
+    background-color: #FF5722;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Main Section */
+.intro {
+    padding: 50px;
     background-color: white;
+    text-align: center;
+}
+
+
+.swipe-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    height: 60px;
+    margin: 20px auto;
+    position: relative;
+    background: rgba(0, 0, 0, 0.1); /* Subtle background for contrast */
+    border-radius: 10px;
+    border: 2px solid #007BFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+}
+
+.swipe-text {
+    font-size: 36px;
+    font-weight: bold;
+    color: darkorange;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    opacity: 0; /* Initially hidden */
+}
+
+.swipe-text.active {
+    transform: translateY(0);
+    opacity: 1; /* Fully visible */
+}
+
+.swipe-text.out {
+    transform: translateY(-100%);
+    opacity: 0; /* Fades out */
+}
+
+/* Add glow effect for the active text */
+.swipe-text.active {
+    text-shadow: 0 0 10px #007BFF, 0 0 20px #007BFF;
+}
+
+
+/* Video Section */
+.video video {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Adjust video size on desktop */
+@media (min-width: 1024px) {
+    .video video {
+        max-width: 50%;
+    }
+}
+
+/* Responsive Layout for Mobile and Tablet */
+@media (max-width: 768px) {
+    /* Show hamburger menu on mobile */
+    .hamburger-container {
+        display: block;
+    }
+
+    /* Hide regular navigation links on mobile */
+    #leftNavLinks {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+    }
+
+    /* Show nav links when the hamburger menu is active */
+    #leftNavLinks.active {
+        display: flex;
+    }
+
+    /* Hide search box on mobile */
+    .search-box {
+        display: none;
+    }
+
+    /* Adjust size of search input and button */
+    .search-box input {
+        width: 150px;
+    }
+
+    /* Make the video take up the full screen width on mobile */
+    .video video {
+        max-width: 100%;
+    }
+
+    /* Adjust contact button */
+    #Contact {
+        font-size: 18px;
+        padding: 15px;
+        background-color: #FF5722;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer p {
     margin: 5px 0;
 }
 
-/* Media query for mobile responsiveness */
+/* Responsive footer for mobile */
 @media (max-width: 768px) {
-    .left-nav {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #333;
-        width: 100%;
-        flex-direction: column;
-        padding: 20px;
+    footer {
+        font-size: 12px;
+        padding: 15px;
     }
-
-    .left-nav li {
-        margin: 10px 0;
-    }
-
-    .hamburger-menu {
-        display: block;
-        cursor: pointer;
-    }
-
-    .search-box {
-        margin-left: 10px;
-    }
-
-    .hamburger-container.open + .left-nav {
-        display: flex;
-    }
-}
-
-/* Add a hover effect for navigation links */
-.left-nav li a:hover,
-.right-nav li a:hover {
-    color: #ff6347; /* Hover color */
 }

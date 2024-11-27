@@ -1,0 +1,142 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the header sticks to the top of the page */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Dark background color for the header */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo img {
+    height: 50px; /* Adjust based on your logo size */
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.left-nav {
+    list-style: none;
+    display: flex;
+}
+
+.left-nav li {
+    margin-right: 20px;
+}
+
+.left-nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Right Navigation (light mode button, login, get a quote) */
+.right-nav {
+    list-style: none;
+    display: flex;
+}
+
+.right-nav li {
+    margin-left: 20px;
+}
+
+.right-nav li a,
+.right-nav li button {
+    color: white;
+    font-size: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Search Box Styling */
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.search-box input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-box button {
+    padding: 5px 10px;
+    background-color: #ff6347; /* A light red color for the button */
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #ff4500;
+}
+
+/* Hamburger menu for mobile responsiveness */
+.hamburger-menu {
+    display: none; /* Hidden by default, make it visible on smaller screens */
+}
+
+.hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+    .left-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-nav li {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .search-box {
+        margin-left: 10px;
+    }
+
+    .hamburger-container.open + .left-nav {
+        display: flex;
+    }
+}
+
+/* Add a hover effect for navigation links */
+.left-nav li a:hover,
+.right-nav li a:hover {
+    color: #ff6347; /* Hover color */
+}

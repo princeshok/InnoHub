@@ -1,40 +1,30 @@
-// Toggle Dark Mode
-const darkModeButton = document.getElementById("lightMode");
+// Hamburger Menu Toggle
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    const navMenu = document.getElementById('navMenu');
 
-darkModeButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    const isDarkMode = document.body.classList.contains("dark-mode");
-    darkModeButton.textContent = isDarkMode ? "🌙" : "🌞"; // Toggle icon based on mode
-});
+    hamburgerMenu.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
 
-// Toggle Hamburger Menu on Mobile
-const hamburgerMenu = document.getElementById("hamburgerMenu");
-const leftNavLinks = document.getElementById("leftNavLinks");
+    // Dark Mode Toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    });
 
-hamburgerMenu.addEventListener("click", () => {
-    leftNavLinks.classList.toggle("active"); // Show/hide nav links when menu is clicked
-});
-
-document.addEventListener("DOMContentLoaded", function() {
+    // Swipe Text Animation
     const swipeTexts = document.querySelectorAll('.swipe-text');
-    let currentIndex = 0;
+    let index = 0;
 
-    function changeSwipeText() {
-        // Remove 'active' class from all texts
-        swipeTexts.forEach(text => text.classList.remove('active'));
-        
-        // Add 'active' class to the current index text
-        swipeTexts[currentIndex].classList.add('active');
-        
-        // Move to the next index
-        currentIndex = (currentIndex + 1) % swipeTexts.length; // Loop back to first word
-    }
+    setInterval(() => {
+      const current = swipeTexts[index];
+      current.classList.remove('active');
+      current.classList.add('exiting');
 
-    // Initial setup: change the first swipe text to active
-    changeSwipeText();
-    
-    // Change text every 5 seconds (match with the animation timing)
-    setInterval(changeSwipeText, 5000);
-});
+      index = (index + 1) % swipeTexts.length;
+      const next = swipeTexts[index];
+      next.classList.add('active');
 
-
+      setTimeout(() => current.classList.remove('exiting'), 500); // Delay to remove the exiting class
+    }, 2000); // Change text every 2 seconds 

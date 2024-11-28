@@ -121,6 +121,61 @@
       opacity: 0; /* Make the exiting text invisible */
     }
 
+    .buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+  }
+  .btn-get-started {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+  }
+  .btn-contact-us {
+    background-color: black; /* White background */
+    color: white;
+    position: relative;
+    padding-right: 30px; /* Space for the arrow */
+  }
+  .btn-contact-us .arrow {
+    font-size: 24px; /* Adjust the arrow size to be bigger */
+    color: white;
+    margin-left: 10px; /* Space between text and arrow */
+    vertical-align: middle; /* Align the arrow with the text */
+  }
+
+  /* Hover Effect */
+  .btn:hover {
+    opacity: 0.8;
+  }
+  .btn-contact-us:hover {
+    background-color: lightgrey;
+    color: black; /* White text on hover */
+  }
+
+  /* Dark mode styles */
+  @media (prefers-color-scheme: dark) {
+    .btn-contact-us {
+      background-color: black; /* Black background in dark mode */
+      color: white; /* White text in dark mode */
+    }
+    .btn-contact-us .arrow {
+      color: white; /* White arrow in dark mode */
+    }
+    .btn-contact-us:hover {
+      background-color: lightgrey;
+      color: black;
+    }
+  }
+
     /* Video Section */
     .video {
       display: flex;
@@ -187,3 +242,541 @@
     body.dark-mode .swipe-text {
       color: #ffa500; /* Dark orange */
     }
+
+    body.dark-mode .tech-stack {
+    background-color: black; /* Dark background color for dark mode */
+    color: #ecf0f1; /* Light text color for better contrast */
+}
+
+body.dark-mode .tech-content h2 {
+    color: #ecf0f1; /* Light text for heading in dark mode */
+}
+
+body.dark-mode .tech-content p {
+    color: #bdc3c7; /* Slightly lighter text color for readability */
+}
+
+/* Expertise Section (Dark Mode) */
+body.dark-mode .expertise-section {
+    background-color: black; /* Dark background color for dark mode */
+    color: #ecf0f1; /* Light text color for better contrast */
+}
+
+body.dark-mode .expertise-item {
+    background-color: black; /* Darker background for each item in dark mode */
+    color: white; /* Light text color for better contrast */
+}
+
+body.dark-mode .expertise-item h3 {
+    color: white; /* Gold color for the heading in dark mode */
+}
+
+body.dark-mode .expertise-item p {
+    color: white; /* Lighter text color for description */
+}
+
+/* Dark Mode Font Awesome Icon Color */
+body.dark-mode .expertise-item i {
+    color: #f39c12; /* Gold color for stars and icons */
+}
+
+/* Dark Mode for Testimonials */
+body.dark-mode .testimonials-section {
+  background-color: #121212; /* Dark background */
+  color: #f0f0f0; /* Light text color */
+}
+
+body.dark-mode .testimonial-item {
+  background: #1e1e1e; /* Slightly lighter than the main background for contrast */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Adjust shadow for dark mode */
+}
+
+body.dark-mode .testimonial-item h3 {
+  color: #fff; /* White for headings */
+}
+
+body.dark-mode .testimonial-item .position {
+  color: white; /* Light gray for positions */
+}
+
+body.dark-mode .testimonial-item blockquote {
+  color: white; /* Slightly lighter text for quotes */
+}
+
+body.dark-mode .profile-photo img {
+  border-color: #555; /* Dark border for profile images */
+}
+
+body.dark-mode .testimonials-container p {
+    color: white; /* Lighter text color for description */
+}
+
+body.dark-mode .testimonials-container h2 {
+    color: white; /* Lighter text color for description */
+}
+
+/* Expertise Section (Dark Mode) */
+body.dark-mode .privacy-policy {
+    background-color: black; /* Dark background color for dark mode */
+    color: white; /* Light text color for better contrast */
+}
+
+body.dark-mode .policy-content h1,
+body.dark-mode .policy-content h2,
+body.dark-mode .policy-content h3,
+body.dark-mode .policy-content p {
+    color: white; /* Lighter color for text */
+}
+
+body.dark-mode .about-us-page h1,
+body.dark-mode .about-us-page h2,
+body.dark-mode .about-us-page li,
+body.dark-mode .about-us-page p {
+    color: white; /* Lighter color for text */
+}
+
+/* Dark Mode Styling for Terms & Conditions */
+body.dark-mode .terms-content {
+    background-color: black; /* Dark background */
+    color: #ddd; /* Light text for readability */
+}
+
+body.dark-mode .terms-content h1,
+body.dark-mode .terms-content h2 {
+    color: #fff; /* Light color for headings */
+}
+
+body.dark-mode .terms-content p {
+    color: #ddd; /* Light text for paragraphs */
+}
+
+body.dark-mode .terms-content a {
+    color: #4e9aff; /* Light blue links */
+}
+
+body.dark-mode .terms-content a:hover {
+    color: #66aaff; /* Hover state with slightly different blue */
+}
+
+
+.privacy-policy {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.policy-content h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+.policy-content h2 {
+    margin-top: 20px;
+    padding: 20px;
+    color: #34495e;
+    text-align: center;
+}
+
+.policy-content ul {
+    list-style-type: none;  /* Remove the default bullets */
+    padding: 10px;  /* Remove any default padding */
+    text-align: center;  /* Center the list items horizontally */
+}
+
+.policy-content ul li {
+    display: block;  /* Display each list item in a row */
+    margin: 0 10px;  /* Optional: add space between list items */
+}
+
+.policy-content p {
+    line-height: 1.6;
+    text-align: center;
+}
+
+.policy-content a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+/* Lock icon styling */
+.lock-icon {
+    text-align: center;
+    margin-bottom: 30px; /* Space below the lock image */
+}
+
+.lock-icon img {
+    width: 15vw;  /* 15% of the viewport width */
+    max-width: 120px; /* Maximum width for the image */
+    height: auto;
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 768px) {
+    .lock-icon img {
+        width: 30vw;  /* 30% of the viewport width on mobile */
+        max-width: 100px; /* Adjust max width on mobile for smaller devices */
+    }
+}
+
+/* Styling for the Request a Quote section */
+.quote-section {
+    background-color: #2c3e50;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.quote-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.quote-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.cta-button {
+    background-color: #2980b9;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;  /* Ensure positioning of the circle */
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #3498db;
+}
+
+/* Animation: Circle moving around the button */
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #2980b9;
+    border-radius: 50%;
+    animation: circleAnimation 2s linear infinite;
+    pointer-events: none;  /* Prevents the animation from interfering with button clicks */
+}
+
+/* Keyframes for circulating effect */
+@keyframes circleAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Technology Stack Section */
+.tech-stack {
+    
+    padding: 60px 20px;  /* Space around the content */
+    text-align: center;  /* Center the content */
+    margin: 40px 0;  /* Space above and below the section */
+}
+
+.tech-content h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;  /* Space between the heading and paragraph */
+}
+
+.tech-content p {
+    font-size: 1.2rem;
+    color: #34495e;
+    line-height: 1.6;  /* Improve readability */
+    max-width: 800px;  /* Limit the width of the paragraph */
+    margin: 0 auto;  /* Center the paragraph */
+    padding: 0 20px;  /* Padding to ensure text doesn't touch the edges */
+}
+
+/* Expertise Section */
+.expertise-section {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+}
+
+.expertise-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.expertise-content h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.expertise-content p {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 40px;
+}
+
+/* Flexbox for Items */
+.expertise-item {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 30px); /* Flexible layout for 3 columns */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.expertise-item h3 {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.expertise-item i {
+    font-size: 2rem;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.expertise-item p {
+    font-size: 1rem;
+    color: #34495e;
+    line-height: 1.6;
+}
+
+/* Flex Container */
+.expertise-content {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to the next row if space runs out */
+    justify-content: center; /* Center-align items in the container */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .expertise-item {
+        flex: 1 1 calc(50% - 20px); /* Switch to 2 columns on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .expertise-item {
+        flex: 1 1 100%; /* Full-width on small screens */
+    }
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonials-container h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonials-container p {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.testimonials-slider {
+  position: relative;
+  overflow: hidden;
+  height: 400px; /* Set a consistent height */
+}
+
+.testimonial-group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+}
+
+.testimonial-group.active {
+  top: 0;
+  opacity: 1;
+}
+
+.testimonial-group.exit {
+  top: -100%;
+  opacity: 0;
+}
+
+.testimonial-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 30%; /* Adjust to fit three testimonials side by side */
+}
+
+.profile-photo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+}
+
+.testimonial-item h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.testimonial-item .position {
+  font-size: 0.9rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.testimonial-item blockquote {
+  font-size: 0.95rem;
+  color: black;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .testimonial-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .testimonials-slider {
+    height: auto; /* Let height adjust for mobile */
+  }
+}
+
+/* General layout for the About Us page */
+.about-us-page {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Section Styling */
+.about-intro, .our-mission, .our-services, .why-choose-us, .our-vision {
+    margin-bottom: 30px;
+}
+
+.about-intro h1, .our-mission h2, .our-services h2, .why-choose-us h2, .our-vision h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+.about-intro p, .our-mission p, .our-services p, .why-choose-us ul, .our-vision p {
+    font-size: 18px;
+    color: #555;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: blue;
+}
+
+/* Styling for the image at the top */
+.about-us-image {
+    text-align: center;
+    margin-bottom: 30px; /* Adds space between the image and content */
+}
+
+.about-us-image img {
+    width: 100%;
+    max-width: 1200px; /* Set a maximum width for larger screens */
+    height: auto; /* Keeps the aspect ratio intact */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: adds shadow around the image */
+}
+
+/* Specific styling for the terms-content section */
+.terms-content {
+    padding: 40px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #555; /* Text color for paragraphs */
+}
+
+.terms-content h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.terms-content h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.terms-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.terms-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.terms-content a:hover {
+    text-decoration: underline;
+}
+
+
+

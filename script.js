@@ -28,3 +28,30 @@
 
       setTimeout(() => current.classList.remove('exiting'), 500); // Delay to remove the exiting class
     }, 2000); // Change text every 2 seconds 
+
+    document.addEventListener("DOMContentLoaded", () => {
+  const groups = document.querySelectorAll(".testimonial-group");
+  let currentIndex = 0;
+
+  function showTestimonials() {
+    groups.forEach((group, index) => {
+      group.classList.remove("active", "exit");
+
+      // Active group
+      if (index === currentIndex) {
+        group.classList.add("active");
+      } 
+      // Exiting group
+      else if (index === (currentIndex - 1 + groups.length) % groups.length) {
+        group.classList.add("exit");
+      }
+    });
+
+    // Move to next group
+    currentIndex = (currentIndex + 1) % groups.length;
+  }
+
+  // Initialize and set interval for the animation
+  showTestimonials();
+  setInterval(showTestimonials, 3000); // Slide every 3 seconds
+});

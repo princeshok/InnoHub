@@ -4,22 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <title>Www.InnoHub.Com</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm a web developer passionate about technology.</p>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>Copyright © 2024 INNOHUB Services</p>
-        <p>All Rights Reserved</p>
-    </footer>
+    <!-- Navigation Section -->
+  <nav>
+    <div class="logo">InnoHub</div>
+    <div class="hamburger-menu" id="hamburgerMenu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="menu" id="navMenu">
+      <li>
+        <div class="search-box">
+          <input type="text" placeholder="Search...">
+          <button>🔍</button>
+        </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="get.html">Get a Quote</a></li>
+      <li><button id="darkModeToggle">🌙</button></li>
+    </ul>
+  </nav>
 
+   <main class="about-us-page">
 
+         <div class="about-us-image">
+        <img src="about.jpg" alt="People discussing technology">
+    </div>
+
+        <section class="about-intro">
+            <h1>About Us</h1>
+            <p>Welcome to InnoHub IT Solutions, your trusted partner in digital innovation. We are a dynamic IT company dedicated to delivering comprehensive solutions that help businesses thrive in the digital age.</p>
+        </section>
+
+        <section class="our-mission">
+            <h2>Our Mission</h2>
+            <p>At InnoHub IT Solutions, our mission is to empower businesses by providing top-notch IT services tailored to meet the unique needs of each client. We strive to deliver innovative, high-quality solutions that drive success and growth.</p>
+        </section>
+
+        <section class="our-services">
+            <h2>Our Services</h2>
+            <p>We specialize in a wide range of IT services, including:</p>
+            <ul>
+                <li><strong>Website Development:</strong> Crafting responsive and user-friendly websites to establish your online presence.</li>
+                <li><strong>Web Application Development:</strong> Creating powerful and scalable web applications tailored to your business needs.</li>
+                <li><strong>Mobile Application Development:</strong> Designing intuitive and feature-rich mobile apps for both iOS and Android platforms.</li>
+                <li><strong>Graphic Design:</strong> Providing creative and visually appealing graphic design services to boost your brand's identity.</li>
+                <li><strong>IT Solutions:</strong> Offering comprehensive IT solutions to streamline your business operations and enhance productivity.</li>
+            </ul>
+            <a href="services.html" class="cta-button">Get to know more about our services</a>
+        </section>
+
+        <section class="why-choose-us">
+            <h2>Why Choose Us</h2>
+            <ul>
+                <li><strong>Innovation:</strong> We leverage the latest technologies to deliver cutting-edge solutions.</li>
+                <li><strong>Expertise:</strong> Our team of skilled professionals brings extensive experience and knowledge to every project.</li>
+                <li><strong>Client-Centric:</strong> We prioritize our clients’ needs and work closely with them to achieve their objectives.</li>
+                <li><strong>Quality:</strong> We are committed to delivering high-quality services that exceed expectations.</li>
+                <li><strong>Reliability:</strong> We build long-term relationships based on trust, reliability, and transparency.</li>
+            </ul>
+        </section>
+
+        <section class="our-vision">
+            <h2>Our Vision</h2>
+            <p>Our vision is to be a leading IT solutions provider recognized for our innovation, quality, and client satisfaction. We aim to transform businesses and enable them to succeed in the ever-evolving digital landscape.</p>
+        </section>
+    </main>
+
+     <section class="quote-section">
+    <div class="quote-content">
+        <h2>Ready to Transform Your Business?</h2>
+        <p>Get started today with a personalized quote from DewX IT Solutions. Let's bring your digital vision to life!</p>
+        <a href="/request-quote" class="cta-button">Request a quote today!</a>
+    </div>
+</section>
+
+    <footer style="text-align: center; padding: 20px; background-color: #f8f9fa; font-size: 14px; color: #6c757d;">
+    <p>Copyright © 2024 <strong>InnoHub IT Solutions</strong>.<br> All rights reserved.</p>
+    <p>Designed and developed with care.</p>
+    <p>
+        <a href="privacy.html" style="color: black; text-decoration: none;">Privacy Policy</a> | 
+        <a href="terms.html" style="color: black; text-decoration: none;">Terms and Conditons</a> |
+        <a href="index.html" style="color: black; text-decoration: none;">Terms and Conditons</a> |
+         <a href="about.html" style="color: black; text-decoration: none;">About</a> |
+          <a href="services" style="color: black; text-decoration: none;">Services</a> |
+        <a href="contact.html" style="color: black; text-decoration: none;">Contact Us</a> |
+        <a href="https://www.facebook.com/share/DN2WwuoRW8knEDcz/?mibextid=LQQJ4d" target="_blank" style="margin: 0 10px; color: #1877f2; text-decoration: none;">Facebook</a> | 
+        <a href="https://twitter.com/shokthadripper" target="_blank" style="margin: 0 10px; color: black; text-decoration: none;">Twitter</a> | 
+        <a href="https://www.instagram.com/shokblotaspellz?igsh=MTdndmMzYjJoMWduag%3D%3D&utm_source=qr" target="_blank" style="margin: 0 10px; color: black; text-decoration: none;">Instagram</a> | 
+        <a href="https://wa.me/231778950595" target="_blank" style="margin: 0 10px; color: black; text-decoration: none;">WhatsApp</a>
+    </p>
+</footer>
 </body>
+
+<script src="script.js"></script>
 </html>

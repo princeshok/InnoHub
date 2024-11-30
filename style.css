@@ -639,6 +639,12 @@ body.dark-mode .terms-content a:hover {
 .testimonials-section {
   padding: 40px 20px;
   background-color: #f9f9f9;
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1; /* Make sure it's above other elements */
+}
+
+.testimonial-grid {
+    overflow: visible !important; /* Prevent content from being clipped on mobile */
 }
 
 .testimonials-container {
@@ -727,6 +733,21 @@ body.dark-mode .terms-content a:hover {
     width: 100%;
     margin-bottom: 20px;
   }
+
+  @media (max-width: 768px) {
+    /* Ensure the section displays properly on smaller screens */
+    .testimonial-section {
+        display: block; /* Force visibility */
+    }
+
+     .testimonial-grid {
+        grid-template-columns: 1fr; /* Switch to single-column layout for better readability */
+        gap: 15px; /* Adjust spacing for mobile view */
+    }
+
+    .testimonial-card {
+        padding: 15px; /* Add comfortable padding for smaller screens */
+    }
 
   .testimonials-slider {
     height: auto; /* Let height adjust for mobile */
@@ -833,6 +854,3 @@ ul li {
 .terms-content a:hover {
     text-decoration: underline;
 }
-
-
-
